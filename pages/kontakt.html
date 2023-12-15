@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Kontakt | Portfolio</title>
+	
+	<meta name="robots" content="All">
+	<meta name="author" content="Udgiver">
+	<meta name="copyright" content="Information om copyright">
+	
+	<link href="../css/styles.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/iqh7wdu.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="../index.html"><img class="oskar-logo"src="../images/oskarLogo.svg" alt="Oskars portfolio logo"></a>
+            <nav class="desktop-nav">
+                <a class="navigation-link" href="../index.html">Hjem</a>
+                <a class="navigation-link" href="../index.html#allProjects">Prosjekter</a>
+                <a class="navigation-link" href="./kontakt.html">Kontakt</a>
+                <a class="navigation-link" href="./omMeg.html">Om meg</a>
+            </nav>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html">Hjem</a>
+            <a href="../index.html#allProjects">Prosjekter</a>
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./omMeg.html">Om meg</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="firstImpressions">
+
+            <div class="heroKontakt">
+                <div class="text">
+                    <p class="curlyBracket">&#123;</p>
+                    <div class="hero-text-container">
+                        <h1 class="pageTitle">Kontakt</h1>
+                    </div>
+                    <p class="curlyBracket">&#125;</p>
+                    <!-- <p class="hero-text3">Roskilde-basert frontend-utvikler med studiebakgrunn fra Noroff.</p>
+                    <p class="hero-text3">For tiden student innen Multimediadesign ved Zealand Erhvervsakademi, og parallelt engasjert som studentmedarbeider hos Center for Kirkeligt Udviklingssamarbejde med fokus på grafisk design og webutvikling.</p> -->
+                    <address class="contact">
+                        <div class="contact-icons-container">
+                            <i class="bi bi-telephone-fill contact-icons"></i>
+                            <p class="custom-link">40810032</p>
+                        </div>
+                        <div class="contact-icons-container my-3">
+                            <i class="bi bi-inboxes contact-icons"></i>
+                            <a href="mailto:oskar_jenssen@hotmail.com" class="custom-link">oskar_jenssen@hotmail.com</a>
+                            
+                        </div>
+                        <div class="contact-icons-container">
+                            <i class="bi bi-linkedin contact-icons"></i>
+                            <a class="custom-link" href="https://www.linkedin.com/in/oskar-heming-jenssen/">LinkedIn</a>
+                        </div>
+                    </address>
+                </div>
+                <div class="kontakt-hero-container">
+                    <!-- <img src="../images/fancyPortrett.png" class="portrait" alt="Portrettbilde av Oskar"> -->
+                    <form id="contact-form" class="custom-form p-3 d-flex flex-column">
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">Navn</label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email addresse</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          </div>
+                        <div class="mb-3">
+                          <label for="inputMessage" class="form-label">Besked</label>
+                          <textarea class="form-control" id="inputMessage" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="customButton text-center">Send inn</button>
+                      </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <a><i class="bi bi-linkedin footer-contact-icons"></i></a>
+        <p>Oskar Jenssen</p>
+        <a href="https://github.com/ohjenssen">Github</a>
+    </footer>
+    <script src="../js/index.mjs" type="module"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

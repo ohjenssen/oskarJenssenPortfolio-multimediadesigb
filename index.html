@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Oskar Jenssen | Portfolio</title>
+	
+	<meta name="robots" content="All">
+	<meta name="author" content="Udgiver">
+	<meta name="copyright" content="Information om copyright">
+	
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.typekit.net/iqh7wdu.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html"><img class="oskar-logo"src="images/oskarLogo.svg" alt="Oskars portfolio logo"></a>
+            <nav class="desktop-nav">
+                <a class="navigation-link" href="index.html">Hjem</a>
+                <a class="navigation-link" href="#allProjects">Prosjekter</a>
+                <a class="navigation-link" href="./pages/kontakt.html">Kontakt</a>
+                <a class="navigation-link" href="./pages/omMeg.html">Om meg</a>
+            </nav>
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html">Hjem</a>
+            <a href="./index.html#allProjects">Prosjekter</a>
+            <a href="./pages/kontakt.html">Kontakt</a>
+            <a href="./pages/omMeg.html">Om meg</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="firstImpressions">
+
+            <div class="hero">
+                <div class="text">
+                    <p class="curlyBracket">&#123;</p>
+                    <div class="hero-text-container">
+                        <p class="hero-text">Hello world, my name is:</p>
+                        <h1 class="pageTitle">Oskar Heming Jenssen</h1>
+                    </div>
+                    <p class="curlyBracket">&#125;</p>
+                    <p class="hero-text2">Forestill deg følgende, du ser etter en praktikant, du kommer over denne portfolioen, det neste som skjer.</p>
+                    <img class="slogan" src="./images/slogan.svg" alt="slogan" alt="if(hireOskar) {getGreatSuccess()}">
+                </div>
+                <div class="hero-image-container">
+                    <img src="./images/portrettOskar.png" class="portrait" alt="Portrettbilde av Oskar">
+                    <a href="#best-of-projects">
+                        <i class="bi bi-arrow-down-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="best-of-projects">
+
+            <div class="bestOfText">
+                <h2 class="title">bestOf()</h2>
+                <p>Dette er mine tre beste prosjekter når det kommer til kodning. But wait, theres more! Bla ned for å se enda mer.</p>
+            </div>
+
+
+            <div class="carousel-container">
+                <!-- <div class="square"></div> -->
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <a class="carousel-item active" href="./pages/auctionAce.html" id="auctionAce">
+                            <img src="./images/projectThumbnails/auctionaceThumbnail.png" class="d-block w-100" alt="Bilde av Acution Ace">
+                        </a>
+                        <a class="carousel-item" id="holidaze" href="./pages/holidaze.html">
+                            <img src="./images/projectThumbnails/holidazeThumbnail.png" class="d-block w-100" alt="Bilde av Holidaze">
+                        </a>
+                        <a class="carousel-item" id="michaelRugaard" href="./pages/michaelRugaard.html">
+                            <img src="./images/projectThumbnails/michaelRugaardThumbnail.png" class="d-block w-100" alt="Bilde av Michael Rugaard sin nettside">
+                        </a>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <button class="customButton" id="seeMore">Se mer</button>
+            </div>
+            <div class="vectorContainer">
+                <img class="vectorSVGs" src="./images/circle.svg" alt="vektor bilde">
+                <img class="vectorSVGs2" src="./images/circleLine.svg" alt="vektor bilde">
+                <img class="vectorSVGs" src="./images/tagger.svg" alt="vektor bilde">
+            </div>
+        </section>
+        
+        <section id="allProjects">
+            <div class="hero">
+                <div class="text">
+                    <p class="curlyBracket">&#123;</p>
+                    <div class="hero-text-container">
+                        <h1 class="pageTitle">Alle prosjekter</h1>
+                    </div>
+                    <p class="curlyBracket">&#125;</p>
+                </div>
+            </div>
+            
+            <div class="container mt-5">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                    <div class="col">
+                        <article class="project-card">
+                            <img src="./images/projectThumbnails/holidazeThumbnail.png" alt="Project Image">
+                            <div class="overlay1">
+                                <div class="overlay-text">
+                                    <a href="./pages/holidaze.html">
+                                        Holidaze
+                                    </a>
+                                </div>
+                            </div>                    
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="project-card">
+                            <img src="./images/projectThumbnails/auctionaceThumbnail.png" alt="Project Image">
+                            <div class="overlay2">
+                                <div class="overlay-text">
+                                    <a href="./pages/auctionAce.html">
+                                        Auction Ace
+                                    </a>
+                                </div>
+                            </div>                    
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="project-card">
+                            <img src="./images/projectThumbnails/dyrevaernetThumbnail.png" alt="Project Image">
+                            <div class="overlay3">
+                                <div class="overlay-text">
+                                    <a href="./pages/dyrevaernet.html">
+                                        Dyreværnet
+                                    </a>
+                                </div>
+                            </div>                    
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="project-card">
+                            <img src="./images/projectThumbnails/gymsharkPuregymThumbnail.png" alt="Project Image">
+                            <div class="overlay1">
+                                <div class="overlay-text">
+                                    <a href="./pages/gymsharkXpuregym.html">
+                                        Gymshark x Puregym
+                                    </a>
+                                </div>
+                            </div>                    
+                        </article>
+                    </div>
+                    
+                    <div class="col">
+                        <article class="project-card">
+                            <img src="./images/projectThumbnails/michaelRugaardThumbnail.png" alt="Project Image">
+                            <div class="overlay3">
+                                <div class="overlay-text">
+                                    <a href="./pages/michaelRugaard.html">
+                                        Michael Rugaard
+                                    </a>
+                                </div>
+                            </div>                    
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="project-card">
+                            <img src="./images/projectThumbnails/sofalabThumbnail.png" alt="Project Image">
+                            <div class="overlay2">
+                                <div class="overlay-text">
+                                    <a href="./pages/sofalab.html">
+                                        Sofalab
+                                    </a>
+                                </div>
+                            </div>                    
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+    </main>
+   <footer class="mt-5">
+        <a><i class="bi bi-linkedin footer-contact-icons"></i></a>
+        <p>Oskar Jenssen</p>
+        <a href="https://github.com/ohjenssen">Github</a>
+   </footer>
+
+    <script src="./js/index.mjs" type="module"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+@import "./partials/header";
+@import "./partials/bestOfSection";
+@import "./partials/allProjects";
+@import "./partials/specificProject";
+@import "./partials/omMeg";
+@import "./partials/kontakt";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+$input-border-color: #162A51;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"farve": $cyan-400,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+// Custom styling
+
+// Color variables
+$darkBlue: #162A51;
+$coolOrange: #DE935E;
+$bananaYellow: #FFCE21;
+$wineRed: #CC6666;
+$limeGreen: #B5BD68;
+
+body { 
+    background-color: $darkBlue;
+    font-family: 'source-code-pro';
+}
+
+i {
+    color: $bananaYellow;
+}
+
+p, h1, h2, h3, a {
+    color: white;
+    font-family: 'source-code-pro';
+}
+
+.customButton {
+    color: $darkBlue;
+    background-color: $coolOrange;
+    padding: 10px 50px 10px 50px;
+    border: none;
+    margin-top: 16px;
+}
+
+.customButton:hover {
+    background-color: #f4a872;
+    transition: 0.5s;
+}
+
+#firstImpressions {
+    margin-top: 15%;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.curlyBracket {
+    font-size: 42px;
+    color: $bananaYellow;
+}
+
+.pageTitle {
+    color: $coolOrange;
+    font-size: 24px;
+}
+
+.text {
+    margin: 16px;
+}
+
+.hero-text-container {
+    margin-left: 40px;
+}
+
+.hero-text {
+    color: $bananaYellow;
+    margin-bottom: 0px;
+}
+
+.hero-text2 {
+    width: 350px;
+    color: white;
+}
+
+.hero-text3 {
+    font-size: 16px;
+    width: 350px;
+}
+
+.slogan {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 200px;
+}
+
+.images {
+    width: 300px;
+}
+
+.portrait {
+    width: 350px;
+}
+
+.portraitLoddrett {
+    width: 350px;
+}
+
+.hero-image-container {
+    display: flex;
+    flex-direction: column;
+    a {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    i {
+        font-size: 40px;
+    }
+
+}
+
+.contact-icons-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    font-size: 18px;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-icons {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    .custom-link {
+        color: $bananaYellow;
+    }
+} 
+
+footer {
+    background-color: $bananaYellow;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p, a {
+        margin: 0;
+        padding: 0;
+        color: $darkBlue;
+    }
+    i {
+        color:$darkBlue;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media(min-width: 500px){
+    .hero-text2 {
+        width: 400px;
+    }
+
+    .portrait {
+        width: 400px;
+    }
+
+    .portraitLoddrett {
+        width: 300px;
+    }
+}
+
+@media(min-width: 768px){
+    #firstImpressions {
+        margin-top: 0px;
+    }
+
+    .navigation-link {
+        font-size: 16px;
+    }
+    
+    .hero {
+        justify-content: space-between;
+    }
+
+    .text {
+        margin-left: 32px;
+    }
+
+    .hero-text2 {
+        width: 350px;
+    }
+
+    .hero-image-container {
+        width: 40%;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: $coolOrange;
+
+        a {
+            position: relative;
+            top: 100px;
+            right: 70%;
+            font-size: 50px;
+        }
+    }
+
+    .portrait {
+        position: relative;
+        right: 20%;
+        width: 300px;
+    }
+
+    .portraitLoddrett {
+        position: relative;
+        right: 20%;
+        // width: 350px;
+    }
+}
+
+@media(min-width: 1000px){
+    .text {
+        margin-left: 64px;
+    }
+
+    .hero-text2 {
+        width: 400px;
+    }
+
+    .portrait {
+        position: relative;
+        right: 30%;
+        width: 400px;
+    }
+
+    .portraitLoddrett {
+        position: relative;
+        right: 30%;
+        width: 300px;
+    }
+
+    .contact-icons-container {
+        font-size: 24px;
+    }
+
+}
