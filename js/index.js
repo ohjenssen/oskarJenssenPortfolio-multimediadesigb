@@ -1,4 +1,13 @@
-export function header(){
+const path = location.pathname;
+
+function seeMore(e){
+    const currentIndex = document.querySelector('.carousel-inner .carousel-item.active');
+    const currentID = currentIndex.id;
+    console.log(currentID);
+    window.location.href = `/pages/${currentID}.html`;
+}
+
+function header(){
     window.addEventListener('scroll', function (e) {
         if(window.pageYOffset > 75){
             document.querySelector('.nav-container').classList.add('is-scrolling');
@@ -15,3 +24,15 @@ export function header(){
         mobile_menu.classList.toggle('is-active');
     })
 }
+
+switch(path){
+    case '/':
+    case '/index.html':
+    case '/portfolio/':
+        case '/portfolio/index.html':
+        document.querySelector('#seeMore').addEventListener('click', seeMore);
+        break;
+    
+}
+
+window.onload = header();
