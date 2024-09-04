@@ -32,7 +32,6 @@ switch(path){
         case '/portfolio/index.html':
         document.querySelector('#seeMore').addEventListener('click', seeMore);
         break;
-    
 }
 
 window.onload = header();

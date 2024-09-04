@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	
 	<title>Oskar Jenssen | Portfolio</title>
-	<base href=".">
+	
 	<meta name="robots" content="All">
-	<meta name="author" content="Oskar Heming Jenssen">
-	<meta name="copyright" content="Siden tilhører Oskar Heming Jenssen">
-	<meta name="description" content="Oskar Heming Jenssen sin portfolio">
+	<meta name="author" content="Udgiver">
+	<meta name="copyright" content="Information om copyright">
+	
 	<link href="css/styles.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.typekit.net/iqh7wdu.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,12 +16,11 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="index.html"><img class="oskar-logo"src="images/oskarLogo.svg" alt="Oskars portfolio logo"></a>
+            <a href="index.html"><img class="oskar-logo" src="images/oskarLogo.svg" alt="Oskars portfolio logo"></a>
             <nav class="desktop-nav">
-                <a class="navigation-link" href="index.html">Hjem</a>
-                <a class="navigation-link" href="#allProjects">Prosjekter</a>
-                <a class="navigation-link" href="./pages/kontakt.html">Kontakt</a>
-                <a class="navigation-link" href="./pages/omMeg.html">Om meg</a>
+                <a class="navigation-link" href="#allProjects">Projects</a>
+                <a class="navigation-link" href="#">Skills</a>
+                <a class="navigation-link" href="#">Contact</a>
             </nav>
             <button class="hamburger">
                 <div class="bar"></div>
@@ -29,9 +28,9 @@
         </div>
         <nav class="mobile-nav">
             <a href="index.html">Hjem</a>
-            <a href="./index.html#allProjects">Prosjekter</a>
-            <a href="./pages/kontakt.html">Kontakt</a>
-            <a href="./pages/omMeg.html">Om meg</a>
+            <a href="./index.html#allProjects">Projects</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
@@ -46,16 +45,14 @@
                         <h1 class="pageTitle">Oskar Heming Jenssen</h1>
                     </div>
                     <p class="curlyBracket">&#125;</p>
-                    <p class="hero-text2">Bak hvert smilende ansikt er det en linje med kode. Vurderer du å ansette Oskar? Her er nøkkelen til suksess:</p>
+                    <p class="hero-text2">Forestill deg følgende, du ser etter en praktikant, du kommer over denne portfolioen, det neste som skjer.</p>
                     <img class="slogan" src="./images/slogan.svg" alt="slogan" alt="if(hireOskar) {getGreatSuccess()}">
                 </div>
                 <div class="hero-image-container">
                     <img src="./images/portrettOskar.png" class="portrait" alt="Portrettbilde av Oskar">
-                    <a href="#best-of-projects">
-                        <i class="bi bi-arrow-down-circle"></i>
-                    </a>
                 </div>
             </div>
+
         </section>
         <section id="best-of-projects">
 
@@ -93,7 +90,7 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-                <button class="customButton" id="seeMore">Se prosjektet</button>
+                <button class="customButton" id="seeMore">Se mer</button>
             </div>
             <div class="vectorContainer">
                 <img class="vectorSVGs" src="./images/circle.svg" alt="vektor bilde">
@@ -200,12 +197,12 @@
         
     </main>
    <footer class="mt-5">
-        <a href="https://www.linkedin.com/in/oskar-heming-jenssen/"><i class="bi bi-linkedin footer-contact-icons"></i></a>
+        <a><i class="bi bi-linkedin footer-contact-icons"></i></a>
         <p>Oskar Jenssen</p>
         <a href="https://github.com/ohjenssen">Github</a>
    </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/index.mjs" type="module"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
