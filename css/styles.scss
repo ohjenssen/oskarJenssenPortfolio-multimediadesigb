@@ -160,6 +160,55 @@ p, h1, h2, h3, a {
     }
 }
 
+#projects {
+    margin: 16px;
+}
+
+.projectSlider {
+    width: 100%;
+    padding: 0px 16px;
+    display: flex;
+    overflow: scroll;
+
+    .singleProject {
+        .singleProjectImgContainer {
+            background-color: gray;
+            width: 250px;
+            padding: 16px 64px;
+            clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+
+            .singleProjectImg {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.projectContainer {
+
+    .projectContainerImages {
+        display: flex; 
+        .projectImageDesktopContainer {
+            width: 500px;
+
+            .projectImageDesktop {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .projectImageMobileContainer {
+                width: 300px;
+
+            .projectImageMobile {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
 footer {
     background-color: $bananaYellow;
     padding: 16px;
