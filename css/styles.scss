@@ -28,14 +28,14 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // Custom styling
 
 // Color variables
-$darkBlue: #162A51;
+$customBlack: #1a1b1d;
 $coolOrange: #DE935E;
 $bananaYellow: #FFCE21;
 $wineRed: #CC6666;
 $limeGreen: #B5BD68;
 
 body { 
-    background-color: $darkBlue;
+    background-color: $customBlack;
     font-family: 'source-code-pro';
 }
 
@@ -49,7 +49,7 @@ p, h1, h2, h3, a {
 }
 
 .customButton {
-    color: $darkBlue;
+    color: $customBlack;
     background-color: $coolOrange;
     padding: 10px 50px 10px 50px;
     border: none;
@@ -61,16 +61,13 @@ p, h1, h2, h3, a {
     transition: 0.5s;
 }
 
-#firstImpressions {
-    margin-top: 15%;
-}
-
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 16px;
+    margin-top: 64px;
 }
 
 .curlyBracket {
@@ -112,29 +109,25 @@ p, h1, h2, h3, a {
     width: 300px;
 }
 
-.portrait {
-    width: 350px;
+.portrait-image-container {
+    position: relative;
+
+    .portrait {
+        width: 350px;
+        // clip-path: polygon(50% 1%, 98% 23%, 79% 84%, 16% 71%, 13% 13%);
+    }
+    
+    .portrait-path {
+        width: 350px;
+        position: absolute;
+        z-index: -1;
+        left: 10px;
+        top: 10px;
+    }
 }
 
 .portraitLoddrett {
     width: 350px;
-}
-
-// .hero-image-container {
-//     display: flex;
-//     flex-direction: column;
-//     a {
-//         text-align: center;
-//         margin-bottom: 10px;
-//     }
-//     i {
-//         font-size: 40px;
-//     }
-
-// }
-
-.hero-image-container {
-
 }
 
 .contact-icons-container {
@@ -159,6 +152,14 @@ p, h1, h2, h3, a {
     }
 } 
 
+.section-seperation {
+    width: 100%;
+    
+    .section-seperation-path {
+        width: 100%;
+    }
+}
+
 footer {
     background-color: $bananaYellow;
     padding: 16px;
@@ -168,10 +169,10 @@ footer {
     p, a {
         margin: 0;
         padding: 0;
-        color: $darkBlue;
+        color: $customBlack;
     }
     i {
-        color:$darkBlue;
+        color:$customBlack;
         display: flex;
         align-items: center;
     }
@@ -192,10 +193,6 @@ footer {
 }
 
 @media(min-width: 768px){
-    #firstImpressions {
-        margin-top: 0px;
-    }
-
     .navigation-link {
         font-size: 16px;
     }
@@ -203,30 +200,14 @@ footer {
     .hero {
         justify-content: space-between;
         margin: 32px;
+        margin-top: 64px
     }
 
     .hero-text2 {
         width: 350px;
     }
 
-    // .hero-image-container {
-    //     width: 40%;
-    //     min-height: 100vh;
-    //     justify-content: center;
-    //     align-items: center;
-    //     background-color: $coolOrange;
-
-    //     a {
-    //         position: relative;
-    //         top: 100px;
-    //         right: 70%;
-    //         font-size: 50px;
-    //     }
-    // }
-
     .portrait {
-        // position: relative;
-        // right: 20%;
         width: 300px;
     }
 
@@ -247,8 +228,6 @@ footer {
     }
 
     .portrait {
-        // position: relative;
-        // right: 30%;
         width: 400px;
     }
 
