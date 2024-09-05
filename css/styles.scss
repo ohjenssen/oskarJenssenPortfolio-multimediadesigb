@@ -1,31 +1,14 @@
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 @import "./partials/header";
-@import "./partials/bestOfSection";
-@import "./partials/allProjects";
-@import "./partials/specificProject";
-@import "./partials/omMeg";
-@import "./partials/kontakt";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
-// 2. Include any default variable overrides here
-$link-decoration: none;
-$input-border-color: #162A51;
-
-// 3. Include remainder of required Bootstrap stylesheets
+// Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
-// 4. Include any default map overrides here
-$custom-colors: (
-	"farve": $cyan-400,
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "bootstrapComponents";
 
-// Custom styling
 
 // Color variables
 $customBlack: #1a1b1d;
@@ -105,10 +88,11 @@ p, h1, h2, h3, a {
     width: 200px;
 }
 
-.images {
-    width: 300px;
-}
+// .images {
+//     width: 300px;
+// }
 
+// -------------------------------- Portrait --------------------------------
 .portrait-image-container {
     position: relative;
 
@@ -125,9 +109,7 @@ p, h1, h2, h3, a {
     }
 }
 
-.portraitLoddrett {
-    width: 350px;
-}
+// --------------------------------------------------------------------------------
 
 .contact-icons-container {
     display: flex;
@@ -151,6 +133,8 @@ p, h1, h2, h3, a {
     }
 } 
 
+// ---------------------- Seksjon separasjon ---------------------------------
+
 .section-seperation {
     width: 100%;
     
@@ -163,6 +147,8 @@ p, h1, h2, h3, a {
     margin: 16px;
 }
 
+
+// --------------------------------- SLIDER --------------------------------------------
 .projectSlider {
     width: 100%;
     padding: 0px 16px;
@@ -184,11 +170,13 @@ p, h1, h2, h3, a {
     }
 }
 
+// ------------------------------- Prosjekt Container ---------------------------------
 .projectContainer {
     margin-top: 32px;
 
     .projectContainerImages {
         display: flex; 
+        flex-direction: column;
 
         .projectImageDesktopContainer {
 
@@ -200,6 +188,7 @@ p, h1, h2, h3, a {
         }
 
         .projectImageMobileContainer {
+            margin-top: 16px;
 
             .projectImageMobile {
                 width: 100%;
@@ -233,12 +222,18 @@ footer {
         width: 400px;
     }
 
-    .portrait {
-        width: 400px;
-    }
+    .projectContainerImages {
+        flex-direction: row !important;
 
-    .portraitLoddrett {
-        width: 300px;
+        .projectImageDesktopContainer { 
+            margin-right: 8px;
+        }
+
+        .projectImageMobileContainer {
+            margin-left: 8px;
+            margin-top: 0px !important;
+        }
+
     }
 }
 
@@ -257,39 +252,25 @@ footer {
         width: 350px;
     }
 
-    .portrait {
-        width: 300px;
-    }
-
-    .portraitLoddrett {
-        position: relative;
-        right: 20%;
-        // width: 350px;
-    }
-
     #projects {
         margin: 32px;
     }
 
-    .projectImageDesktopContainer {
-        margin-right: 8px;
-    }
+    .portrait-image-container {
+        .portrait, .portrait-path { 
+            width: 350px;
+        }
 
-    .projectImageMobileContainer { 
-        margin-left: 8px;
     }
 }
 
 @media(min-width: 1000px){
     .hero {
         margin: 64px;
+        margin-top: 115px;
     }
 
     .hero-text2 {
-        width: 400px;
-    }
-
-    .portrait {
         width: 400px;
     }
 
@@ -301,4 +282,18 @@ footer {
         margin: 64px;
     }
 
+    .portrait-image-container {
+        .portrait, .portrait-path { 
+            margin-top: 32px;
+            width: 450px;
+        }
+
+    }
+
+}
+
+@media(min-width: 1200px){
+    .hero-text2 {
+        width: 600px;
+    }
 }
