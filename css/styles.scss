@@ -197,8 +197,13 @@ p, h1, h2, h3, a {
             }
         }
     }
+
+    .projectTitle {
+        margin-top: 16px;
+    }
 }
 
+// ------------------------------- Footer ---------------------------------
 footer {
     background-color: $bananaYellow;
     padding: 16px;
