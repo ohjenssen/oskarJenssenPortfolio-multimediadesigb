@@ -31,16 +31,23 @@ p, h1, h2, h3, a {
     font-family: 'source-code-pro';
 }
 
-.customButton {
+.customBtn {
     color: $customBlack;
-    background-color: $coolOrange;
+    background-color: $bananaYellow;
     padding: 10px 50px 10px 50px;
     border: none;
     margin-top: 16px;
+    border-radius: 10px;
+
+    .github {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
 }
 
-.customButton:hover {
-    background-color: #f4a872;
+.customBtn:hover {
+    background-color: #4F57AA;
+    border-radius: 0px;
     transition: 0.5s;
 }
 
@@ -157,14 +164,23 @@ p, h1, h2, h3, a {
 
     .singleProject {
         .singleProjectImgContainer {
-            background-color: gray;
-            width: 250px;
-            padding: 16px 64px;
-            clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+            background-color: rgb(235, 235, 235);
+            width: 150px;
+            margin: 0px 8px 0px 8px;
+
+            -webkit-mask-image: url('../images/projectClipPath.svg'); /* For WebKit browsers */
+            mask-image: url('../images/projectClipPath.svg'); /* Standard */
+            -webkit-mask-size: cover;
+            mask-size: cover;
+            -webkit-mask-position: center;
+            mask-position: center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
 
             .singleProjectImg {
                 width: 100%;
                 object-fit: contain;
+
             }
         }
     }
