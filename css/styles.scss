@@ -188,6 +188,8 @@ p, h1, h2, h3, a {
     .projectContainerImages {
         display: flex; 
         flex-direction: column;
+        margin-bottom: 16px;
+        align-items: center;
 
         .projectImageDesktopContainer {
 
@@ -200,9 +202,12 @@ p, h1, h2, h3, a {
 
         .projectImageMobileContainer {
             margin-top: 16px;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
 
             .projectImageMobile {
-                width: 100%;
+                width: 50%;
                 object-fit: contain;
                 border-radius: 20px;
             }
@@ -215,21 +220,47 @@ p, h1, h2, h3, a {
 }
 
 // ------------------------------- Footer ---------------------------------
+
 footer {
-    background-color: $bananaYellow;
-    padding: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    p, a {
-        margin: 0;
-        padding: 0;
-        color: $customBlack;
+    // background-color: $bananaYellow;
+
+    .footer-top{
+        width: 100%;
+        position: relative;
+        top: 10px;
+
+        .footerImg {
+            width: 100%;
+        }
     }
-    i {
-        color:$customBlack;
+
+    .footer-body {
+        padding-top: 16px;
+        background-color: #EDBF1D;
         display: flex;
+        justify-content: center;
+        h2 {
+            color: $customBlack;
+        }
+    }
+
+    .footer-footer {
+        color: $customBlack;
+        background-color: #EDBF1D;
+        padding: 16px 32px 16px 32px;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+
+        .footerIcons {
+            width: 50px;
+        }
+
+        a {
+            color: $customBlack;
+            text-decoration: none;
+            font-weight: 600;
+        }
     }
 }
 
@@ -248,9 +279,15 @@ footer {
         .projectImageMobileContainer {
             margin-left: 8px;
             margin-top: 0px !important;
+
+            .projectImageMobile {
+                width: 100% !important;
+            }
         }
 
     }
+
+    
 }
 
 @media(min-width: 768px){

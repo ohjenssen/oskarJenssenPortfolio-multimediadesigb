@@ -6,3 +6,4 @@ css/*.css.map
 .DS_Store
 images/.DS_Store
 images/projects/.DS_Store
+.vscode
