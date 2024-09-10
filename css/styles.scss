@@ -217,6 +217,12 @@ p, h1, h2, h3, a {
     .projectTitle {
         margin-top: 16px;
     }
+
+    .projectBtnContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 // ------------------------------- Footer ---------------------------------
@@ -288,6 +294,10 @@ footer {
             }
         }
 
+    }
+
+    .projectBtnContainer {
+        display: block !important;
     }
 
     .footer-body {
