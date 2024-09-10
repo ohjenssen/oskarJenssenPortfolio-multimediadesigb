@@ -85,10 +85,14 @@ $customBlack: #1a1b1d;
     left: 100%;
     width: 100%;
     min-height: 100vh;
-    display: block;
+    // display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     z-index: 98;
     background-color: $customBlack;
-    padding-top: 120px;
+    // padding-top: 120px;
     transition: 0.4s;
 }
 

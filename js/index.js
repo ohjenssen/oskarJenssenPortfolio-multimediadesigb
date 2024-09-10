@@ -25,13 +25,13 @@ function header(){
     })
 }
 
-switch(path){
-    case '/':
-    case '/index.html':
-    case '/portfolio/':
-        case '/portfolio/index.html':
-        // document.querySelector('#seeMore').addEventListener('click', seeMore);
-        break;
-}
+// switch(path){
+//     case '/':
+//     case '/index.html':
+//     case '/portfolio/':
+//         case '/portfolio/index.html':
+//         // document.querySelector('#seeMore').addEventListener('click', seeMore);
+//         break;
+// }
 
 window.onload = header();
