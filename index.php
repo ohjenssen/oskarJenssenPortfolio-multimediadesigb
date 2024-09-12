@@ -1,3 +1,23 @@
+<?php 
+    include 'settings/config.php';
+
+    // Kobler til databasen med riktig informasjon
+    $connection = new mysqli($servername, $username, $password, $dbname);
+
+    // Sjekker etter kobling
+    if($connection->connect_error){
+        die("Connection failed: " . $connection->connect_error);
+    }
+
+    // Denne koden utfører den faktiske querien. Query() er å sende en spørring til databasen, i dette tilfelle så spørr vi om en SELECT.
+    $result = $connection->query("SELECT * FROM projects");
+
+    // Sjekker om querien gikk igjennom
+    if($result === FALSE){
+        die("Error: " . $conn->error);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -61,49 +81,18 @@
         <section id="projects" class="mt-4">
             <h2>Projects</h2>
             <div class="projectSlider">
-
-                <div class="singleProject">
-                    <div class="singleProjectImgContainer">
-                        <img class="singleProjectImg" src="./images/projects/holidaze/Holidaze-logo-without-slogan.png">
-                    </div>
-                </div>
-
-                <div class="singleProject">
-                    <div class="singleProjectImgContainer">
-                        <img class="singleProjectImg" src="./images/projects/holidaze/Holidaze-logo-without-slogan.png">
-                    </div>
-                </div>
-
-                <div class="singleProject">
-                    <div class="singleProjectImgContainer">
-                        <img class="singleProjectImg" src="./images/projects/holidaze/Holidaze-logo-without-slogan.png">
-                    </div>
-                </div>
-
-                <div class="singleProject">
-                    <div class="singleProjectImgContainer">
-                        <img class="singleProjectImg" src="./images/projects/holidaze/Holidaze-logo-without-slogan.png">
-                    </div>
-                </div>
-
-                <div class="singleProject">
-                    <div class="singleProjectImgContainer">
-                        <img class="singleProjectImg" src="./images/projects/holidaze/Holidaze-logo-without-slogan.png">
-                    </div>
-                </div>
-
-                <div class="singleProject">
-                    <div class="singleProjectImgContainer">
-                        <img class="singleProjectImg" src="./images/projects/holidaze/Holidaze-logo-without-slogan.png">
-                    </div>
-                </div>
-
-                <div class="singleProject">
-                    <div class="singleProjectImgContainer">
-                        <img class="singleProjectImg" src="./images/projects/holidaze/Holidaze-logo-without-slogan.png">
-                    </div>
-                </div>
-
+                <?php 
+                    while($project = $result->fetch_assoc()){
+                        ?>
+                        <div class="singleProject">
+                            <div class="singleProjectImgContainer">
+                                <img class="singleProjectImg" src="<?php echo $project["logo"] ?>">
+                            </div>
+                        </div>
+                         <?php
+                    }
+                    
+                ?>
             </div>
 
             <div class="projectContainer">
@@ -125,6 +114,7 @@
         </section>
         
     </main>
+
    <footer>
         <div class="footer-top">
             <img src="./images/footer_top.svg" class="footerImg">
